@@ -5,10 +5,21 @@
   export let showOpen = false;
 </script>
 
-<h2>{showOpen ? "Open" : "Done"}</h2>
-{#each $todos.filter((t) => showOpen !== t.done) as todo (todo.id)}
-  <div>
-    <Checkbox {todo} />
-    <span>{todo.task}</span>
-  </div>
-{/each}
+<div class="container">
+  <h1>{showOpen ? "Open" : "Done"}</h1>
+  {#each $todos.filter((t) => showOpen !== t.done) as todo (todo.id)}
+    <div>
+      <Checkbox {todo} />
+      <span>{todo.task}</span>
+    </div>
+  {/each}
+</div>
+
+<style>
+  .container {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+</style>

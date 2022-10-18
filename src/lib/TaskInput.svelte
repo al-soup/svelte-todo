@@ -10,6 +10,7 @@
     entry = "";
     input.focus();
   };
+  const reset = () => todos.set([]);
 </script>
 
 <div class="container">
@@ -17,4 +18,12 @@
     <input type="text" bind:value={entry} bind:this={input} />
     <button type="submit" disabled={!entry.length}>Add</button>
   </form>
+  <button on:click={reset}>Reset</button>
 </div>
+
+<style>
+  .container {
+    display: flex;
+    gap: 10px;
+  }
+</style>
