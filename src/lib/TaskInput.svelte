@@ -15,6 +15,6 @@
 <div class="container">
   <form on:submit|preventDefault={addTodo}>
     <input type="text" bind:value={entry} bind:this={input} />
-    <button on:click={addTodo} disabled={!entry.length}>Add</button>
+    <button type="submit" disabled={!entry.length}>Add</button>
   </form>
 </div>
