@@ -3,9 +3,7 @@
   import TaskInput from "./lib/TaskInput.svelte";
   import List from "./lib/List.svelte";
 
-  const reset = () => {
-    todos.set([]);
-  };
+  const reset = () => todos.set([]);
 </script>
 
 <main>
